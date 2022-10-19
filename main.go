@@ -13,15 +13,30 @@ func main() {
 	//为三人的各项信息赋值
 	for i := 0; i < 3; i++ {
 		fmt.Printf("请输入第%d个人的姓名：", i+1)
-		fmt.Scanln(&name[i])
+		_, err := fmt.Scanln(&name[i])
+		if err != nil {
+			fmt.Print("请输入正确的信息")
+		}
 		fmt.Printf("请输入第%d个人的性别：", i+1)
-		fmt.Scanln(&sex[i])
+		_, err = fmt.Scanln(&sex[i])
+		if err != nil {
+			fmt.Print("请输入正确的信息")
+		}
 		fmt.Printf("请输入第%d个人的身高：", i+1)
-		fmt.Scanln(&tall[i])
+		_, err = fmt.Scanln(&tall[i])
+		if err != nil {
+			fmt.Print("请输入正确的信息")
+		}
 		fmt.Printf("请输入第%d个人的体重：", i+1)
-		fmt.Scanln(&weight[i])
+		_, err = fmt.Scanln(&weight[i])
+		if err != nil {
+			fmt.Print("请输入正确的信息")
+		}
 		fmt.Printf("请输入第%d个人的年龄：", i+1)
-		fmt.Scanln(&age[i])
+		_, err = fmt.Scanln(&age[i])
+		if err != nil {
+			fmt.Print("请输入正确的信息")
+		}
 	}
 	fmt.Println()
 
